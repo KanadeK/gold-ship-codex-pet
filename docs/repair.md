@@ -84,6 +84,11 @@ python -m ruff --version
 python scripts/release_check.py
 ```
 
+If a `--no-isolation` build reports that `setuptools.build_meta` is
+unavailable, install the checked-in `requirements-dev.txt` and verify that all
+entries from `[build-system].requires` are also declared in the `dev` extra.
+Do not remove `--no-isolation` merely to hide an undeclared build dependency.
+
 Do not move a tag or replace a Release asset until the exact tagged commit
 passes locally and in GitHub Actions.
 

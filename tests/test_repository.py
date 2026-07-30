@@ -60,3 +60,22 @@ def test_curated_qa_reports_are_portable() -> None:
         assert "C:\\\\" not in text, path
         assert "D:\\\\" not in text, path
         assert "hatch-run" not in text, path
+
+
+def test_no_isolation_build_declares_backend_dependencies() -> None:
+    pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    requirements = (ROOT / "requirements-dev.txt").read_text(encoding="utf-8")
+    release_builder = (ROOT / "scripts" / "build_release.py").read_text(encoding="utf-8")
+
+    assert '"--no-isolation"' in release_builder
+    assert '"setuptools>=75,<90"' in pyproject
+    assert '"wheel>=0.45,<1"' in pyproject
+    assert "setuptools==" in requirements
+    assert "wheel==" in requirements
+
+
+def test_release_workflows_use_pinned_development_environment() -> None:
+    for name in ("ci.yml", "pages.yml", "release.yml"):
+        workflow = (ROOT / ".github" / "workflows" / name).read_text(encoding="utf-8")
+        assert "python -m pip install -r requirements-dev.txt" in workflow
+        assert 'python -m pip install -e ".[dev]"' not in workflow

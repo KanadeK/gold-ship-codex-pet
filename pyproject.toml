@@ -37,8 +37,10 @@ dev = [
   "mypy>=1.14,<2",
   "PyYAML>=6.0,<7",
   "pytest>=8.3,<9",
-  "ruff>=0.9,<1",
+  "ruff>=0.16.1,<1",
+  "setuptools>=75,<90",
   "types-Pillow>=10.2,<12",
+  "wheel>=0.45,<1",
 ]
 
 [project.scripts]
