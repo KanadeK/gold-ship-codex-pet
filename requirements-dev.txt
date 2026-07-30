@@ -6,7 +6,7 @@ build==1.2.2.post1
 coverage[toml]==7.6.12
 mypy==1.15.0
 PyYAML==6.0.3
-pytest==8.3.5
+pytest==9.1.1
 ruff==0.16.1
 setuptools==83.0.0
 types-Pillow==10.2.0.20240822
