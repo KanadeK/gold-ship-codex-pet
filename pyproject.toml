@@ -34,7 +34,7 @@ dependencies = ["Pillow>=11.1,<13"]
 dev = [
   "build>=1.2.2,<2",
   "coverage[toml]>=7.6,<8",
-  "mypy>=1.14,<2",
+  "mypy>=1.14,<3",
   "PyYAML>=6.0,<7",
   "pytest>=8.3,<9",
   "ruff>=0.16.1,<1",
