@@ -19,7 +19,7 @@ def test_deterministic_helpers(tmp_path: Path) -> None:
     assert canonical_json({"b": 1, "a": 2}) == '{"a":2,"b":1}'
     assert sha256_bytes(b"x") == "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881"
     assert resolve_within(tmp_path, "pet/file") == (tmp_path / "pet" / "file").resolve()
-    with pytest.raises(ValueError, match="unsafe|escapes"):
+    with pytest.raises(ValueError, match=r"unsafe|escapes"):
         resolve_within(tmp_path, "../escape")
     assert not is_relative_safe("")
     assert not is_relative_safe("/absolute")

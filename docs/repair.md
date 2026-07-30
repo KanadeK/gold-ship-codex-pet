@@ -74,12 +74,31 @@ older backups manually and validate them before moving anything.
 
 ## CI failure
 
-Reproduce with the same Python version shown in the job:
+Record the Python, Ruff, MyPy, and pytest versions shown in the job. Reproduce
+with the same Python and tool versions instead of assuming an older local
+environment exercises every current rule:
 
 ```bash
 python -m pip install -e ".[dev]"
+python -m ruff --version
 python scripts/release_check.py
 ```
 
 Do not move a tag or replace a Release asset until the exact tagged commit
 passes locally and in GitHub Actions.
+
+## Pages `configure-pages` Not Found
+
+A new repository can contain a correct Pages workflow while the Pages site
+itself is still disabled. If `actions/configure-pages` reports `Get Pages site
+failed` with `Not Found` after the site build passed:
+
+1. Open **Settings → Pages** for the repository.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Rerun the failed Pages workflow and wait for both `build` and `deploy`.
+4. Request the published HTTPS URL and confirm it serves the expected commit.
+
+Do not add `enablement: true` with the default `GITHUB_TOKEN`: the
+`configure-pages` action requires a separate token with administration and
+Pages write permissions for automatic enablement. Keep that stronger token out
+of an ordinary public workflow.

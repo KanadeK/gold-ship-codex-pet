@@ -37,7 +37,7 @@ def test_bundle_rejects_traversal(tmp_path: Path) -> None:
         bundle.writestr("pet.json", "{}")
         bundle.writestr("spritesheet.webp", b"x")
         bundle.writestr("SHA256SUMS", "")
-    with pytest.raises(ValueError, match="members|unsafe"):
+    with pytest.raises(ValueError, match=r"members|unsafe"):
         verify_bundle(malicious)
 
 
