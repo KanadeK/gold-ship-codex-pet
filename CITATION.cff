@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If this project helps your pet workflow, cite the repository."
+title: "Gold Ship Codex Pet"
+type: software
+authors:
+  - family-names: "KanadeK"
+version: 0.1.0
+date-released: 2026-07-30
+license: MIT
+repository-code: "https://github.com/KanadeK/gold-ship-codex-pet"
+url: "https://kanadek.github.io/gold-ship-codex-pet/"
+keywords:
+  - codex-pet
+  - spritesheet
+  - visual-regression
+  - umamusume

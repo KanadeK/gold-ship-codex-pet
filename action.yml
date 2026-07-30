@@ -1,0 +1,51 @@
+name: "Codex Pet Backdrop Gauntlet"
+description: "Validate a Codex v2 pet and audit every used cell across desktop backgrounds"
+author: "KanadeK"
+branding:
+  icon: "eye"
+  color: "red"
+inputs:
+  pet-path:
+    description: "Directory containing pet.json and spritesheet.webp"
+    required: false
+    default: "pet"
+  backgrounds:
+    description: "Background palette JSON"
+    required: false
+    default: ""
+  policy:
+    description: "Backdrop audit policy JSON"
+    required: false
+    default: ""
+  output-dir:
+    description: "Evidence output directory"
+    required: false
+    default: "build/backdrop-audit"
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: "3.12"
+        cache: "pip"
+    - name: Install Backdrop Gauntlet
+      shell: bash
+      run: python -m pip install "${{ github.action_path }}"
+    - name: Validate pet
+      shell: bash
+      run: >-
+        golshi-pet validate "${{ inputs.pet-path }}" --strict --json
+    - name: Audit backgrounds
+      shell: bash
+      env:
+        INPUT_BACKGROUNDS: "${{ inputs.backgrounds }}"
+        INPUT_POLICY: "${{ inputs.policy }}"
+      run: |
+        backgrounds="${INPUT_BACKGROUNDS:-${{ github.action_path }}/examples/backgrounds.json}"
+        policy="${INPUT_POLICY:-${{ github.action_path }}/examples/backdrop-policy.json}"
+        golshi-pet backdrop-audit "${{ inputs.pet-path }}" \
+          --backgrounds "$backgrounds" \
+          --policy "$policy" \
+          --output-dir "${{ inputs.output-dir }}" \
+          --json

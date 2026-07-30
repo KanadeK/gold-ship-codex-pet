@@ -1,0 +1,10 @@
+{
+  "scales": [
+    1.0,
+    0.5
+  ],
+  "min_edge_contrast_p10": 1.08,
+  "max_low_contrast_fraction": 0.58,
+  "low_contrast_ratio": 1.18,
+  "alpha_threshold": 32
+}

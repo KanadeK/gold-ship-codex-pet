@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair": "horizontal-1", "A": "ambiguous", "B": "screen-right", "reason": "A is frontal with symmetric eyes and no readable lateral turn; B's nose, eye line, and near headphone turn right."},
+    {"pair": "horizontal-2", "A": "screen-right", "B": "screen-left", "reason": "A's lifted face and nose point right; B mirrors those facial and headphone landmarks toward left."},
+    {"pair": "horizontal-3", "A": "screen-right", "B": "screen-left", "reason": "The nose, cheek profile, eye line, and visible near headphone turn right in A and left in B."},
+    {"pair": "horizontal-4", "A": "screen-left", "B": "screen-right", "reason": "Strong side profiles: A's nose points left with hair trailing right, while B's nose points right with hair trailing left."},
+    {"pair": "horizontal-5", "A": "screen-left", "B": "screen-right", "reason": "A shows the near headphone on the right and facial profile left; B reverses those landmarks."},
+    {"pair": "horizontal-6", "A": "screen-right", "B": "screen-left", "reason": "Despite the lowered gaze, A's nose and near headphone orient right, while B's orient left."},
+    {"pair": "horizontal-7", "A": "screen-right", "B": "screen-left", "reason": "A's near headphone and cheek profile indicate a right turn; B's corresponding landmarks indicate a left turn."},
+    {"pair": "vertical-1", "A": "down", "B": "up", "reason": "A has a tucked chin and lowered eye line; B lifts the chin and pupils visibly upward."},
+    {"pair": "vertical-2", "A": "down", "B": "up", "reason": "A's bowed head exposes more hat top and lowers the eyes; B's raised chin and eye line point up."},
+    {"pair": "vertical-3", "A": "up", "B": "down", "reason": "A lifts the face and pupils; B bows the head with lowered lids and a more visible hat top."},
+    {"pair": "vertical-4", "A": "down", "B": "up", "reason": "A's chin and eye line are lowered, whereas B's chin and eyes are raised."},
+    {"pair": "vertical-5", "A": "up", "B": "down", "reason": "A's wide eyes and lifted chin read upward; B shows a tucked chin, lowered lids, and more hat top."},
+    {"pair": "vertical-6", "A": "up", "B": "down", "reason": "A clearly tilts the face and eyes upward; B lowers the chin and gaze."},
+    {"pair": "vertical-7", "A": "down", "B": "up", "reason": "A shows slightly more hat top with a lowered eye line; B raises the chin and eye line."}
+  ]
+}

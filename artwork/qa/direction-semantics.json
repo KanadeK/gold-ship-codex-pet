@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "reviewed_by": "parent-preflight",
+  "source": "qa/look-directions.png",
+  "directions": [
+    {
+      "direction": "000",
+      "verdict": "pass",
+      "expected": "up",
+      "observed": "frontal up",
+      "horizontal_evidence": "Frontal and centered; no horizontal axis is required.",
+      "vertical_evidence": "Raised chin, pupils, and face surface clearly aim toward the top edge.",
+      "reason": "The up cardinal is unmistakable at normal pet size."
+    },
+    {
+      "direction": "022.5",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "up-right",
+      "horizontal_evidence": "Pupils, nose, and three-quarter face shift toward screen-right.",
+      "vertical_evidence": "Chin and pupils remain visibly raised.",
+      "reason": "Both axes read and the pose advances smoothly from 000."
+    },
+    {
+      "direction": "045",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "up-right",
+      "horizontal_evidence": "Rightward cheek, nose, and eye placement are clear.",
+      "vertical_evidence": "The face and gaze remain lifted.",
+      "reason": "A clear up-right diagonal with stable identity and registration."
+    },
+    {
+      "direction": "067.5",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "mostly right with up cue",
+      "horizontal_evidence": "The head and face surface point screen-right.",
+      "vertical_evidence": "The pupils and chin retain a readable upward cue.",
+      "reason": "The pose naturally approaches the 090 cardinal without reversal."
+    },
+    {
+      "direction": "090",
+      "verdict": "pass",
+      "expected": "right",
+      "observed": "screen-right",
+      "horizontal_evidence": "The profile nose and face point unmistakably toward the right edge.",
+      "vertical_evidence": "Near-level pitch; no vertical axis is required.",
+      "reason": "The right cardinal passed the hard blind gate."
+    },
+    {
+      "direction": "112.5",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "down-right",
+      "horizontal_evidence": "The nose and three-quarter face remain screen-right.",
+      "vertical_evidence": "Lowered eyelids, chin, and face surface read downward.",
+      "reason": "Both axes are readable and continue clockwise from 090."
+    },
+    {
+      "direction": "135",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "down-right",
+      "horizontal_evidence": "The rightward facial turn remains definite.",
+      "vertical_evidence": "The head and pupils angle clearly downward.",
+      "reason": "A clear down-right diagonal with no loop reversal."
+    },
+    {
+      "direction": "157.5",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "down-right",
+      "horizontal_evidence": "The labeled sequence and final blind majority both confirm the right-facing cheek and nose cue.",
+      "vertical_evidence": "The downward head and gaze are unmistakable.",
+      "reason": "Both axes pass and the pose stays in the correct quadrant while approaching 180."
+    },
+    {
+      "direction": "180",
+      "verdict": "pass",
+      "expected": "down",
+      "observed": "frontal down",
+      "horizontal_evidence": "Broadly frontal; no horizontal axis is required.",
+      "vertical_evidence": "Tucked chin, lowered eyelids, and face surface clearly aim down.",
+      "reason": "The down cardinal passed the hard blind gate."
+    },
+    {
+      "direction": "202.5",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "down-left",
+      "horizontal_evidence": "Pupils, nose, and cheek turn toward screen-left.",
+      "vertical_evidence": "The gaze and chin remain lowered.",
+      "reason": "Both axes passed blind review and begin the left half cleanly."
+    },
+    {
+      "direction": "225",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "down-left",
+      "horizontal_evidence": "The three-quarter face and nose point screen-left.",
+      "vertical_evidence": "The lowered pupils and chin retain a clear down cue.",
+      "reason": "A readable down-left diagonal with stable canonical asymmetries."
+    },
+    {
+      "direction": "247.5",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "mostly left with down cue",
+      "horizontal_evidence": "The face is strongly screen-left.",
+      "vertical_evidence": "A modest but readable lowered gaze remains.",
+      "reason": "The pose advances smoothly into the 270 cardinal."
+    },
+    {
+      "direction": "270",
+      "verdict": "pass",
+      "expected": "left",
+      "observed": "screen-left",
+      "horizontal_evidence": "The profile nose, eye, and face surface point unmistakably toward the left edge.",
+      "vertical_evidence": "Near-level pitch; no vertical axis is required.",
+      "reason": "The left cardinal passed the hard blind gate."
+    },
+    {
+      "direction": "292.5",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "up-left",
+      "horizontal_evidence": "The nose and face remain on the same screen-left side as 270.",
+      "vertical_evidence": "The pupils, nose, and chin begin lifting.",
+      "reason": "Both axes passed blind review and the pose leaves 270 without reversal."
+    },
+    {
+      "direction": "315",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "up-left",
+      "horizontal_evidence": "The face and pupils retain a definite screen-left cue.",
+      "vertical_evidence": "The chin and gaze are visibly raised.",
+      "reason": "A clear up-left diagonal with stable scale and identity."
+    },
+    {
+      "direction": "337.5",
+      "verdict": "warning",
+      "expected": "up-left",
+      "observed": "nearly up with subtle left cue",
+      "horizontal_evidence": "The labeled loop retains a slight screen-left eye and cheek cue, but blind review found the axis subtle.",
+      "vertical_evidence": "The face is visibly lifted toward 000 and the final blind majority confirms the up axis.",
+      "reason": "Accepted intermediate warning: the labeled ordered loop reaches the correct quadrant and reconnects to 000 without a visible reversal."
+    }
+  ],
+  "review_notes": [
+    "Blind hard gates for 000/180 and 090/270 passed.",
+    "Final blind majority confirms 157.5 on both axes; only the intermediate 337.5 horizontal cue remains subtle.",
+    "After full-row scale repair, 337.5->000 area ratio improved from 1.43 to 1.15 and center shift from 13.7px to 5.9px.",
+    "The remaining 157.5->180 metric warning has no visible clipping, alpha hole, identity break, wrong quadrant, or loop reversal and awaits independent final visual confirmation."
+  ]
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Unofficial Gold Ship Codex pet with a complete v2 atlas and reusable QA tools.">
+  <meta name="theme-color" content="#111318">
+  <title>Gold Ship Codex Pet</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Gold Ship Codex Pet home">GOLSHI PET</a>
+    <nav aria-label="Primary navigation">
+      <a href="#atlas">Atlas</a>
+      <a href="#qa">QA</a>
+      <a href="https://github.com/KanadeK/gold-ship-codex-pet">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Unofficial fan project</p>
+        <h1>Gold Ship,<br>inside Codex.</h1>
+        <p class="hero-deck">A complete animated pet with a deterministic QA track.</p>
+        <div class="hero-actions">
+          <a class="button primary"
+            href="https://github.com/KanadeK/gold-ship-codex-pet/releases/latest">
+            Download pet
+          </a>
+          <a class="button secondary" href="#install">Run checks</a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/hero-contact-sheet.png" width="1280" height="960"
+          alt="Gold Ship Codex pet animation poses on a contact sheet">
+      </figure>
+    </section>
+
+    <section class="proof-strip" aria-label="Verified package facts">
+      <p><strong>73</strong><span>active cells</span></p>
+      <p><strong>16</strong><span>look directions</span></p>
+      <p><strong>2</strong><span>audit engines</span></p>
+      <p><strong>90%+</strong><span>coverage gate</span></p>
+    </section>
+
+    <section class="atlas-section" id="atlas">
+      <div class="atlas-copy">
+        <h2>Every mood has a lane.</h2>
+        <p>
+          Eleven rows cover idle, movement, waiting, review, failure, and all
+          sixteen look directions required by Codex pet format v2.
+        </p>
+        <dl>
+          <div><dt>Format</dt><dd>1536 x 2288 WebP</dd></div>
+          <div><dt>Cell</dt><dd>192 x 208 pixels</dd></div>
+          <div><dt>Unused cells</dt><dd>Fully transparent</dd></div>
+        </dl>
+      </div>
+      <figure class="atlas-visual">
+        <img src="assets/spritesheet.webp" width="1536" height="2288"
+          alt="Complete Gold Ship Codex v2 animation atlas">
+      </figure>
+    </section>
+
+    <section class="qa-section" id="qa">
+      <div class="qa-intro">
+        <h2>Put the pet on a real track.</h2>
+        <p>
+          Pet Derby replays seeded state changes. Backdrop Gauntlet measures
+          every frame against desktop colors and scales.
+        </p>
+      </div>
+      <div class="report-layout">
+        <figure class="backdrop-visual">
+          <img src="assets/backdrop-overview.png" width="1536" height="1144"
+            alt="Gold Ship atlas composited over the audit background palette">
+        </figure>
+        <div class="report-panel">
+          <div class="report-switcher" role="group" aria-label="QA report">
+            <button type="button" data-report="derby" aria-pressed="true">
+              Pet Derby
+            </button>
+            <button type="button" data-report="backdrop" aria-pressed="false">
+              Backdrop Gauntlet
+            </button>
+          </div>
+          <div id="report-output" class="report-output" aria-live="polite">
+            <p class="report-state">Loading verified evidence...</p>
+          </div>
+          <noscript>
+            <p class="report-state">Enable JavaScript to inspect the generated JSON reports.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="install-section" id="install">
+      <div>
+        <h2>Install with an exit route.</h2>
+        <p>
+          Validation happens before writes. Replacements are backed up, and
+          rollback refuses invalid recovery data.
+        </p>
+      </div>
+      <div class="command-block">
+        <code id="install-command">golshi-pet install gold-ship.codex-pet</code>
+        <button type="button" id="copy-command">Copy command</button>
+        <p id="copy-status" aria-live="polite"></p>
+      </div>
+      <div class="install-links">
+        <a href="https://github.com/KanadeK/gold-ship-codex-pet#acceptance">
+          Acceptance commands
+        </a>
+        <a href="https://github.com/KanadeK/gold-ship-codex-pet#repair">
+          Repair guide
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Unofficial, non-commercial fan work. Not affiliated with Cygames.</p>
+    <a href="https://umamusume.jp/derivativework_guidelines/">
+      Derivative work guidelines
+    </a>
+  </footer>
+</body>
+</html>

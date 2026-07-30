@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "seed": 564,
+  "steps": 564,
+  "state_weights": {
+    "idle": 8,
+    "running-right": 7,
+    "running-left": 7,
+    "waving": 5,
+    "jumping": 4,
+    "failed": 3,
+    "waiting": 8,
+    "running": 15,
+    "review": 9,
+    "look": 14
+  },
+  "max_centroid_jump": 0.32,
+  "max_area_ratio": 1.9,
+  "max_bbox_size_jump": 0.35
+}

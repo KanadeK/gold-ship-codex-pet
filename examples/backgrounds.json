@@ -1,0 +1,44 @@
+{
+  "backgrounds": [
+    {
+      "id": "codex-ink",
+      "name": "Codex Ink",
+      "color": "#0B0F14"
+    },
+    {
+      "id": "graphite",
+      "name": "Graphite",
+      "color": "#20252B"
+    },
+    {
+      "id": "navy",
+      "name": "Deep Navy",
+      "color": "#0D3B66"
+    },
+    {
+      "id": "forest",
+      "name": "Forest",
+      "color": "#16302B"
+    },
+    {
+      "id": "plum",
+      "name": "Plum",
+      "color": "#38243F"
+    },
+    {
+      "id": "sand",
+      "name": "Warm Sand",
+      "color": "#E7CEAD"
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "color": "#F6F1E8"
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "color": "#FFFFFF"
+    }
+  ]
+}

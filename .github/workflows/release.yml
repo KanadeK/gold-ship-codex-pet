@@ -1,0 +1,48 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - name: Match tag to package
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python - <<'PY'
+          import os
+          from golshi_pet.constants import VERSION
+          expected = f"v{VERSION}"
+          actual = os.environ["RELEASE_TAG"]
+          if actual != expected:
+              raise SystemExit(f"tag {actual!r} does not match {expected!r}")
+          PY
+      - name: Full gate
+        run: python scripts/release_check.py
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: >-
+          gh release create "$RELEASE_TAG"
+          dist/gold-ship.codex-pet
+          dist/gold_ship_codex_pet-*.whl
+          dist/gold_ship_codex_pet-*.tar.gz
+          dist/SHA256SUMS
+          --verify-tag
+          --generate-notes
+          --title "Gold Ship Codex Pet $RELEASE_TAG"

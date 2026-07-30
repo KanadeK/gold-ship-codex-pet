@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "state": "failed",
+  "repairKind": "whole-row-temporal-reorder",
+  "sourceCellOrder": [0, 1, 2, 3, 4, 5, 6, 7],
+  "releaseCellOrder": [0, 2, 4, 6, 7, 5, 3, 1],
+  "pixelEdits": 0,
+  "before": {
+    "atlasSha256": "73e068ec5f7553eef1199ac875304816dc7bf52ac9377b1eadf483f5ddbd716a",
+    "wrapTransition": {
+      "from": 7,
+      "to": 0,
+      "centroidJump": 0.045029,
+      "areaRatio": 1.497543,
+      "bboxSizeJump": 0.463542
+    }
+  },
+  "after": {
+    "atlasSha256": "03170383fdb021309fd060940ba8421267dd654dc7d644b8e7563fdf3623b9d1",
+    "wrapTransition": {
+      "from": 7,
+      "to": 0,
+      "centroidJump": 0.002012,
+      "areaRatio": 1.035231,
+      "bboxSizeJump": 0.005208
+    },
+    "worstBboxSizeJump": 0.265625
+  },
+  "preservation": {
+    "allCellsOutsideFailedRowByteIdentical": true,
+    "failedRowRgbaCellMultisetIdentical": true
+  },
+  "derby": {
+    "seed": 564,
+    "steps": 564,
+    "sequenceSha256": "04427f72df75219bf39c970cc0ff5295efa59031c11befcdaf7a9ab4c2139f38",
+    "result": "pass"
+  },
+  "visualReview": {
+    "result": "pass",
+    "summary": "The ordered loop reads as a sad stand, collapse, curled crouch, recovery, and return to the opening pose without an identity change, scale pop, clipping, or detached effect."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "asset": "pet/spritesheet.webp",
+  "sha256": "03170383fdb021309fd060940ba8421267dd654dc7d644b8e7563fdf3623b9d1",
+  "created": "2026-07-30",
+  "character": {
+    "name": "Gold Ship",
+    "franchise": "Umamusume: Pretty Derby",
+    "officialReference": "https://umamusume.jp/character/goldship",
+    "derivativeWorkGuidelines": "https://umamusume.jp/derivativework_guidelines/"
+  },
+  "generation": {
+    "kind": "AI-assisted original fan-art sprite atlas",
+    "tool": "OpenAI ImageGen",
+    "workflow": "Codex hatch-pet v2",
+    "method": "Grounded full-row generation followed by deterministic extraction, one whole-row temporal loop reorder for the failed state, registration, atlas assembly, and one edge-local chroma despill pass.",
+    "officialReferenceIncludedInRepository": false,
+    "codeGeneratedFinalAnimationRows": false,
+    "individuallyPatchedFinalLookCells": false,
+    "wholeRowTemporalRepair": {
+      "state": "failed",
+      "sourceCellOrder": [0, 1, 2, 3, 4, 5, 6, 7],
+      "releaseCellOrder": [0, 2, 4, 6, 7, 5, 3, 1],
+      "pixelEdits": 0,
+      "evidence": "artwork/qa/failed-loop-repair.json"
+    }
+  },
+  "format": {
+    "spriteVersionNumber": 2,
+    "width": 1536,
+    "height": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "qa": {
+    "atlasValidation": "artwork/qa/atlas-validation.json",
+    "chromaDespill": "artwork/qa/chroma-despill.json",
+    "contactSheet": "artwork/qa/contact-sheet.png",
+    "standardFrameReview": "artwork/qa/standard-frame-review.json",
+    "directionSheet": "artwork/qa/look-directions.png",
+    "directionSemantics": "artwork/qa/direction-semantics.json",
+    "blindDirectionValidation": "artwork/qa/direction-blind-validation.json",
+    "continuity": "artwork/qa/look-continuity.json",
+    "failedLoopPreview": "artwork/qa/failed-loop.gif",
+    "failedLoopRepair": "artwork/qa/failed-loop-repair.json",
+    "independentBlindReviewers": 3,
+    "independentFinalVisualQa": "pass",
+    "reviewedWarning": "337.5 has a subtle horizontal cue at normal pet size; the labeled loop confirms up-left and the cardinal hard gates pass."
+  },
+  "licensing": {
+    "code": "MIT",
+    "fanArt": "See ASSET_LICENSE.md; non-commercial fan use remains subject to current Cygames guidelines and third-party rights."
+  }
+}
