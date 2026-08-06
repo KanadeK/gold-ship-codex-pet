@@ -1,7 +1,7 @@
 -e .[dev]
 
 # Exact versions used for the v0.1.0 release gate.
-Pillow==12.2.0
+Pillow==12.3.0
 build==1.2.2.post1
 coverage[toml]==7.6.12
 mypy==1.15.0
